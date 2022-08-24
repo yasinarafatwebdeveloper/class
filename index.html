@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!----------------------------- Hreader Section Start ---------------------------- -->
+
+    <header>
+        <section class="bg-zinc-900 w-auto py-16">
+            <div class="text-center">
+                <h1 class="text-rose-600 text-6xl font-extrabold italic">Select my unique Five</h1>
+                <p class="text-rose-300 py-5 ">Lorem ipsum dolor sit amet consectetur adipisicing <br> Autem cupiditate voluptate iste repellat culpa fuga quam fugit, modi enim magnam ratione <br> quisquam vero placeat, iure nam asperiores </p>
+            </div>
+        </section>
+    </header>
+<!----------------------------- Hreader Section End ---------------------------- -->
+
+<!----------------------------- Main Section Start ---------------------------- -->
+    <main>
+        <section class="bg-zinc-500">
+            <div class="grid grid-cols-4 gap-3 w-9/12 mx-auto pt-4">
+                <div class="border-red-900 border-2">
+
+                    <div class= "picture-div">
+                        <img class="picture-messi" src="images/messi.jpg" alt="">
+                    </div>
+
+                    <div class="text-center">
+                        <h2 class="  player-name text-2xl font-bold mb-5 text-slate-200">messi</h2>
+                        <button id="btn1" onclick="addClick(this)" class="bg-rose-900 px-12 py-2 mt-4 mb-2 text-slate-200 rounded">Select</button>
+                    </div>
+
+                </div>
+
+                <div class="border-red-900 border-2">
+
+                    <div class="picture-div">
+                        <img class="picture-mpabbe" src="images/mpabbe.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h2 class=" player-name text-2xl font-bold mb-5 text-slate-200">mbappe</h2>
+                        <button id="btn2" onclick="addClick(this)" class="bg-rose-900 px-12 py-2 mt-4 mb-2 text-slate-200 rounded">Select</button>
+                    </div>
+
+                </div>
+                
+                <div class="border-red-900 border-2">
+                    <div>
+                        <img src="images/neymar.jpg" alt="">
+                    </div>
+                    <div class="text-center">
+                        <h2 class=" player-name text-2xl font-bold mb-5 text-slate-200">neymar</h2>
+                        <button id="btn3" onclick="addClick(this)" class="bg-rose-900 px-12 py-2 mt-4 mb-2 text-slate-200 rounded">Select</button>
+                    </div>
+
+                </div>
+
+<!------------------------- Player Selenction Area Start ----------------------->
+                <div class=" bg-zinc-900">
+                    <h2 class="text-2xl font-bold mb-2 text-slate-200 text-center mt-4">
+                        Selected-(V)
+                    </h2>
+
+                    <div>
+                        <div class="overflow-x-auto">
+                            <table class="table w-full">
+                              <!-- head -->
+                              <thead>
+                                  <h2 class="text-2xl font-bold mb-2 text-slate-200 text-center mt-1">Name</h2>
+                              </thead>
+                              <tbody id="cardSelectName" class="text-slate-200">
+                            
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+<!------------------------- Player Selenction Area End ----------------------->
+
+
+                <div class="border-red-900 border-2">
+                          <div class="picture-div"><img class="picture-ramos"   src="images/ramos.jpg" class="w-full" alt=""></div>
+                          <div class="text-center">
+                              <h2 class="text-2xl font-bold mb-5 text-slate-200">ramos</h2>
+                              <button id="btn4" onclick="addClick(this)" class="bg-rose-900 px-12 py-2 mt-14 mb-2 text-slate-200 rounded">Select</button>
+                          </div>
+
+                </div>
+                <div class="border-red-900 border-2">
+                          <div class="picture-div"><img class="picture-renato" src="images/renato.jpg" class="w-full" alt=""></div>
+                          <div class="text-center">
+                              <h2 class="text-2xl font-bold mb-5 text-slate-200">renato</h2>
+                              <button id="btn5" onclick="addClick(this)" class="bg-rose-900 px-12 py-2 mt-14 mb-2 text-slate-200 rounded">Select</button>
+                          </div>
+
+                </div>
+
+                <div class="border-red-900 border-2">
+                          <div class="picture-div"><img class="picture-vitor" src="images/Vitor.jpg" alt=""></div>
+                          <div class="text-center">
+                              <h2 class="text-2xl font-bold mb-5 text-slate-200">vitor</h2>
+                              <button id="btn6" onclick="addClick(this)" class="bg-rose-900 px-12 py-2 mt-14 mb-2 text-slate-200 rounded">Select</button>
+                          </div>
+
+                </div>
+
+                        <!---------------------------- Total Calculet area Start---------------------------->
+                <div class=" bg-zinc-900">
+                          <h2 class="text-2xl font-bold mb-5 text-slate-200 text-center mt-4">
+                              Budget
+                          </h2>
+                          <div class="flex w-9/12 mx-auto">
+                              <h5 class="text-slate-200 w-2/4">Total Players:</h5>
+                          <input id="total-player" class="w-2/4" value="1" type="text">
+                          </div>
+
+                          <div class="text-center">
+                              <button id="calculete-btn" class="bg-emerald-900 px-12 py-2 mt-4 mb-2 text-slate-200 rounded">
+                                  calculate
+                              </button>
+                          </div>
+
+                          <div class="text-center">
+                              <p class="text-slate-200 mb-4">Player Expenses $<span id="calculetValueMan">0000</span> </p>  
+                          </div>
+
+                          <div class="flex w-9/12 mx-auto">
+                              <h5 class="text-slate-200 w-2/4">Manager:</h5>
+                          <input id="manager-inpt" class="w-2/4" value="00" type="text">
+                          </div>
+
+                          <div class="flex w-9/12 mx-auto my-4">
+                              <h5 class="text-slate-200 w-2/4">Coach:</h5>
+                          <input id="coach-inpt" class="w-2/4" value="00" type="text">
+                          </div>
+
+                          <div class="text-center">
+                              <button id="total-calculet" class="bg-emerald-900 px-12 py-2 mt-4 mb-2 text-slate-200">
+                                  calculate Total
+                              </button>
+                          </div>
+
+                          <div class="text-center mb-4">
+                              <p class="text-slate-200 mb-4">Total  $<span id="total-Amont">0000</span> </p>  
+                          </div>
+
+                </div>
+        </section>
+    </main>
+    <script src="players.js"></script>
+</body>
+</html>
